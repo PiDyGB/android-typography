@@ -15,6 +15,7 @@ the License.
 -->
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -30,26 +31,172 @@ the License.
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.gb.android.widget.sample.MainActivity">
 
-        <Button
-            android:id="@+id/button_open_textviews"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="CLOSE"
-            tools:ignore="HardcodedText" />
-
-        <com.github.pidygb.slidinglayout.widget.SlidingLayout
-            android:id="@+id/slideTextviews"
+        <com.github.pidygb.typography.widget.Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="My TrackingTextView"
+            app:typeface="Ubuntu-Regular.ttf"
+            tools:ignore="HardcodedText"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                tools:ignore="HardcodedText" />
-        </com.github.pidygb.slidinglayout.widget.SlidingLayout>
+        <com.github.pidygb.typography.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="0.1"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="0.5"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="1.0"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="1.5"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="2.0"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="2.5"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:textUpperCase="true"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="0.1"
+            app:textUpperCase="true"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="1"
+            app:textUpperCase="true"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Standard font"
+            tools:ignore="HardcodedText,HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ubuntu Regular font"
+            app:typeface="Ubuntu-Regular.ttf"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:typeface="Ubuntu-Regular.ttf" />
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:typeface="Ubuntu-Regular.ttf"
+            tools:ignore="HardcodedText" />
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="0.1"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="0.5"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="1.0"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="1.5"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="2.0"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="2.5"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:textUpperCase="true"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="0.1"
+            app:textUpperCase="true"
+            tools:ignore="HardcodedText"/>
+
+        <com.github.pidygb.typography.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TrackingTextView"
+            app:scaleLetterSpacing="1"
+            app:textUpperCase="true"
+            tools:ignore="HardcodedText"/>
     </LinearLayout>
 
 </ScrollView>

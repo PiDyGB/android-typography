@@ -13,33 +13,16 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.pidygb.slidinglayout.widget;
+package com.github.pidygb.typography.sample;
 
-import android.view.View;
+import android.app.Activity;
+import android.os.Bundle;
 
-public abstract class SlideListenerAdapter implements SlideListener {
-
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * com.slidinglinearlayout.SlideListener#onSlideStart(com.slidinglinearlayout
-     * .SlidingLinearLayout)
-     */
+public class MainActivity extends Activity {
     @Override
-    public void onSlideStart(View slidingView) {
-    }
-
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * com.slidinglinearlayout.SlideListener#onSlideEnd(com.slidinglinearlayout
-     * .SlidingLinearLayout)
-     */
-    @Override
-    public void onSlideEnd(View slidingView) {
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
     }
 
 }

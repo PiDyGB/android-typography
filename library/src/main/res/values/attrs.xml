@@ -15,16 +15,22 @@ the License.
 -->
 <resources>
 
-    <attr name="duration" format="integer" />
-    <attr name="expanded" format="boolean" />
+    <attr name="typeface" format="string" />
+    <attr name="scaleLetterSpacing" format="float" />
+    <attr name="textUpperCase" format="boolean" />
 
-    <declare-styleable name="SlidingLinearLayout">
-        <attr name="duration" />
-        <attr name="expanded" />
+    <declare-styleable name="TextView">
+        <attr name="scaleLetterSpacing" />
+        <attr name="typeface" />
+        <attr name="textUpperCase" />
     </declare-styleable>
-    <declare-styleable name="SlidingLayout">
-        <attr name="duration" />
-        <attr name="expanded" />
+    <declare-styleable name="EditText">
+        <attr name="typeface" />
+    </declare-styleable>
+    <declare-styleable name="Button">
+        <attr name="scaleLetterSpacing" />
+        <attr name="typeface" />
+        <attr name="textUpperCase" />
     </declare-styleable>
 
 </resources>
