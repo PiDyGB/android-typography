@@ -25,7 +25,7 @@ import com.github.pidygb.typography.R;
 import com.github.pidygb.typography.graphics.Typefaces;
 import com.github.pidygb.typography.text.method.TextViewTransformationMethod;
 
-public class Button extends android.widget.Button {
+public class Button extends android.support.v7.widget.AppCompatButton {
 
     private float mScaleLetterSpacing = 0;
     private boolean mAllCaps;

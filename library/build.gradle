@@ -1,16 +1,20 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.0.1"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
-        applicationId "com.github.pidygb.typography"
-        minSdkVersion 4
-        targetSdkVersion 21
-        versionCode 4
-        versionName "0.1.4"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 5
+        versionName "0.1.5"
     }
+
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.0.2'
 }
 
 apply from: 'https://raw.githubusercontent.com/PiDyGB/gradle-mvn-push/master/gradle-mvn-push.gradle'

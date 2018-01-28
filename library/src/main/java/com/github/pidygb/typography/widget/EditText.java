@@ -24,7 +24,7 @@ import android.util.AttributeSet;
 import com.github.pidygb.typography.R;
 import com.github.pidygb.typography.graphics.Typefaces;
 
-public class EditText extends android.widget.EditText {
+public class EditText extends android.support.v7.widget.AppCompatEditText {
 
     private String typeFaceName;
 

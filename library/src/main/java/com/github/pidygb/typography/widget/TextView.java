@@ -28,7 +28,7 @@ import com.github.pidygb.typography.text.method.TextViewTransformationMethod;
 /**
  * @author pidy
  */
-public class TextView extends android.widget.TextView {
+public class TextView extends android.support.v7.widget.AppCompatTextView {
 
     private float mScaleLetterSpacing;
     private Context mContext;
