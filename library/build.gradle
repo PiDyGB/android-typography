@@ -17,4 +17,4 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.0.2'
 }
 
-apply from: 'https://raw.githubusercontent.com/PiDyGB/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'https://raw.githubusercontent.com/PiDyGB/gradle-bintray-push/master/gradle-bintray-push.gradle'
