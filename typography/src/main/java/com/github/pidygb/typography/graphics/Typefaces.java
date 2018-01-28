@@ -25,7 +25,7 @@ import java.util.HashMap;
  * This Class handles font files in the assets folder
  */
 public class Typefaces {
-    private static final HashMap<String, Typeface> fontMap = new HashMap<String, Typeface>();
+    private static final HashMap<String, Typeface> fontMap = new HashMap<>();
 
     /**
      * Loads a font filename from the assets/fonts folder, implements a memory

@@ -19,6 +19,7 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.method.TransformationMethod;
 import android.text.style.ScaleXSpan;
 import android.view.View;
 
@@ -27,11 +28,11 @@ import java.util.Locale;
 /**
  * Transforms source text into an ALL CAPS string, locale-aware.
  */
-public class TextViewTransformationMethod implements TransformationMethod2 {
+public class TextViewTransformationMethod implements TransformationMethod {
 
-    private Locale mLocale;
-    private float mScaleLetterSpacing;
-    private boolean mAllCaps;
+    private final Locale mLocale;
+    private final float mScaleLetterSpacing;
+    private final boolean mAllCaps;
 
     public TextViewTransformationMethod(Context context, boolean allCaps,
                                         float scaleLetterSpacing) {
@@ -72,10 +73,6 @@ public class TextViewTransformationMethod implements TransformationMethod2 {
     @Override
     public void onFocusChanged(View view, CharSequence sourceText,
                                boolean focused, int direction, Rect previouslyFocusedRect) {
-    }
-
-    @Override
-    public void setLengthChangesAllowed(boolean allowLengthChanges) {
     }
 
 }

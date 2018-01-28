@@ -25,38 +25,39 @@ import com.github.pidygb.typography.R;
 import com.github.pidygb.typography.graphics.Typefaces;
 import com.github.pidygb.typography.text.method.TextViewTransformationMethod;
 
-public class Button extends android.support.v7.widget.AppCompatButton {
+/**
+ * @author pidy
+ */
+@SuppressWarnings("unused")
+public class TextView extends android.support.v7.widget.AppCompatTextView {
 
-    private float mScaleLetterSpacing = 0;
+    private float mScaleLetterSpacing;
     private boolean mAllCaps;
     private String mTypeFaceName;
-    private Context mContext;
 
-    public Button(Context context) {
+    public TextView(Context context) {
         super(context);
-        mContext = context;
+        parseAttrs(context, null);
     }
 
-    public Button(Context context, AttributeSet attrs) {
+    public TextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mContext = context;
         parseAttrs(context, attrs);
     }
 
-    public Button(Context context, AttributeSet attrs, int defStyle) {
+    public TextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        mContext = context;
         parseAttrs(context, attrs);
     }
 
     private void parseAttrs(Context context, AttributeSet attrs) {
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs,
-                R.styleable.Button, 0, 0);
+                R.styleable.TextView, 0, 0);
         try {
             mScaleLetterSpacing = a.getFloat(
-                    R.styleable.Button_scaleLetterSpacing, 0f);
-            mAllCaps = a.getBoolean(R.styleable.Button_textUpperCase, false);
-            mTypeFaceName = a.getString(R.styleable.Button_typeface);
+                    R.styleable.TextView_scaleLetterSpacing, 0f);
+            mAllCaps = a.getBoolean(R.styleable.TextView_textUpperCase, false);
+            mTypeFaceName = a.getString(R.styleable.TextView_typeface);
         } finally {
             a.recycle();
         }
@@ -75,11 +76,10 @@ public class Button extends android.support.v7.widget.AppCompatButton {
      * enabled.
      *
      * @param allCaps android.R.styleable#TextView_textAllCaps
-     * @see #setTransformationMethod(android.text.method.TransformationMethod)
      */
     public void setAllCaps(boolean allCaps) {
         mAllCaps = allCaps;
-        setTransformationMethod(new TextViewTransformationMethod(mContext,
+        setTransformationMethod(new TextViewTransformationMethod(getContext(),
                 allCaps, mScaleLetterSpacing));
     }
 
@@ -88,19 +88,19 @@ public class Button extends android.support.v7.widget.AppCompatButton {
      * the specified TextAppearance resource.
      */
     @Override
-    public void setTextAppearance(Context context, int resid) {
-        super.setTextAppearance(context, resid);
+    public void setTextAppearance(Context context, int resId) {
+        super.setTextAppearance(context, resId);
 
-        TypedArray appearance = context.obtainStyledAttributes(resid,
-                R.styleable.Button);
+        TypedArray appearance = context.obtainStyledAttributes(resId,
+                R.styleable.TextView);
 
         boolean allCaps = appearance.getBoolean(
-                R.styleable.Button_textUpperCase, false);
+                R.styleable.TextView_textUpperCase, false);
 
         float scaleLetterSpacing = appearance.getFloat(
-                R.styleable.Button_scaleLetterSpacing, 0f);
+                R.styleable.TextView_scaleLetterSpacing, 0f);
 
-        mTypeFaceName = appearance.getString(R.styleable.Button_typeface);
+        mTypeFaceName = appearance.getString(R.styleable.TextView_typeface);
 
         setTypefaceName(context, mTypeFaceName);
 
@@ -117,6 +117,7 @@ public class Button extends android.support.v7.widget.AppCompatButton {
      * @param font A {@link String} that represent a filename in the assets/fonts
      *             folder
      */
+    @SuppressWarnings("WeakerAccess")
     public void setTypefaceName(Context ctx, String font) {
         mTypeFaceName = font;
         if (mTypeFaceName != null) {
@@ -153,7 +154,7 @@ public class Button extends android.support.v7.widget.AppCompatButton {
      * @param scaleLetterSpacing A {@link float}
      */
     public void setScaleLetterSpacing(float scaleLetterSpacing) {
-        setTransformationMethod(new TextViewTransformationMethod(mContext,
+        setTransformationMethod(new TextViewTransformationMethod(getContext(),
                 mAllCaps, scaleLetterSpacing));
     }
 }
